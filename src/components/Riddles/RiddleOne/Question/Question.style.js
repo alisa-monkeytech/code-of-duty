@@ -35,19 +35,3 @@ export const Input = styled.input`
   color: #2A2E0A;
   text-align: center;
 `;
-
-export const Button = styled.button`
-    border: none;
-    border-radius: 30px;
-    background-color: #32CC9A;
-
-    padding: 8px 18px;
-    width: 239px;
-
-    font-size: 24px;
-    font-weight: 900;
-    line-height: 37px;
-    color: #2A2E0A;
-
-    z-index: 2;
-`;
