@@ -14,8 +14,6 @@ function RiddleOne() {
     const [currentSolution, setCurrentSolution] = useState('');
 
     useEffect(() => {
-        console.log(currentSolution)
-
         if (currentSolution.toLowerCase() === hiddenSolution) {
             setShowInput(false);
         }
