@@ -7,8 +7,9 @@ export const Container = styled.div`
     
     width: 258px;
     height: 258px;
-    margin-top: 60px;
+    margin-top: 50px;
     margin-left: 60px;
+    margin-bottom: 50px;
     
     transform: rotate(45deg);
 `;

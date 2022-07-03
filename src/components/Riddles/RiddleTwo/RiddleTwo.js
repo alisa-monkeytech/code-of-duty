@@ -3,6 +3,7 @@ import Riddles from '../Riddles';
 import RiddleTwo_icon from '../../../assets/images/RiddleTwo_icon.svg';
 import Simon from './Simon/Simon';
 import { Label } from './RiddleTwo.style';
+import GoodJob from '../GoodJob/GoodJob';
 
 function RiddleTwo() {
     return ( 
@@ -12,7 +13,8 @@ function RiddleTwo() {
 
                 <Simon />
 
-                <Label>Simon says... find out!</Label>
+                {false && <Label>Simon says... find out!</Label>}
+                {true && <GoodJob color='#32CC9A'/>}
             </Riddles.LeftSection>
 
             <Riddles.StyledImage src={RiddleTwo_icon} alt='Decorative icon'/>
