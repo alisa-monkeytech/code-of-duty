@@ -5,6 +5,7 @@ import BeforeYouStart from './components/BeforeYouStart/BeforeYouStart';
 import CarouselContainer from './components/CarouselContainer';
 import Home from './components/Home/Home';
 import MathRiddle from './components/MathRiddle/MathRiddle';
+import SuccessScreen from './components/SuccessScreen/SuccessScreen';
 
 const App = () => {
   return (
@@ -18,11 +19,9 @@ const App = () => {
           <Route path="math" element={<MathRiddle />}/>
           <Route index element={<CarouselContainer />} />
         </Route>
+        <Route path="success" element={<SuccessScreen/>}/>
       </Routes>
     </BrowserRouter>
-    // <div className="App">
-    //   <CarouselContainer />
-    // </div>
   )
 }
 
