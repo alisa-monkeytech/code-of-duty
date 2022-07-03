@@ -8,7 +8,7 @@ function BeforeYouStart() {
     const navigate = useNavigate();
 
     const onClickHandler = () => {
-        navigate('/riddles/1');
+        navigate('/riddles');
     }
 
     return ( 
