@@ -14,7 +14,7 @@ export const Container = styled.div`
     transform: rotate(45deg);
 `;
 
-export const BlueButtons = styled.button`
+export const BlueButton = styled.button`
     border: none;
     border-radius: 20px;
     background-color: #1E979680;

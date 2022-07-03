@@ -1,14 +1,14 @@
 import React from "react";
-import { BlueButtons, Container } from "./Simon.style";
+import { BlueButton, Container } from "./Simon.style";
 
-function Simon() {
+function Simon({onButtonClick}) {
   const containersArr = ["top", "right", "bottom", "left"];
 
   return (
     <Container>
         
       {containersArr.map((position) => (
-        <BlueButtons key={position}></BlueButtons>
+        <BlueButton key={position} onClick={() => onButtonClick(position)}></BlueButton>
       ))}
     </Container>
   );
