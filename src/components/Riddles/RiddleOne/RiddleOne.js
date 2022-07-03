@@ -31,7 +31,7 @@ function RiddleOne() {
                 <MoresCodeImg src={RiddleOneMores_icon} alt="Mores code" />
 
                 {showInput && <Question setCurrentSolution={setCurrentSolution}/>}
-                {!showInput && <GoodJob color='#DF229D' code='8940393'/>}
+                {!showInput && <GoodJob color='#DF229D' code='54875'/>}
             </Riddles.LeftSection>
 
             <Riddles.StyledImage src={RiddleOne_icon} alt="Decorative icon" />
