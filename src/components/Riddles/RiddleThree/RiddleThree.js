@@ -29,7 +29,7 @@ function RiddleThree({dots}) {
                 <PuzzleImg src={RiddleThreePuzzle_icon} alt='Puzzle' />
 
                 {showInput && <Question inputLength={6} setCurrentSolution={setCurrentSolution}/>}
-                {!showInput && <GoodJob color='#FED707' code='54875'/>}
+                {!showInput && <GoodJob color='#FED707' code='83753'/>}
             </Riddles.LeftSection>
 
             <Riddles.StyledImage src={RiddleThree_icon} alt="Decorative icon"/>

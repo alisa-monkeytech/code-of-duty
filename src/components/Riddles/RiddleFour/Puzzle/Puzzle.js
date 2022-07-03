@@ -20,7 +20,7 @@ const buttonsArr = [
   RiddleFourPuzzle8_icon,
 ];
 
-function Puzzle() {
+function Puzzle({setIndexes}) {
   const [selectedButtons, setSelectedButtons] = useState([]);
 
   const onClickHandler = (index) => {
@@ -33,6 +33,8 @@ function Puzzle() {
         ...prevSelectedButtons,
         index,
       ]);
+
+    setIndexes(index+"");
   };
 
   return (

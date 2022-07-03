@@ -47,7 +47,7 @@ function RiddleTwo({dots}) {
                 <Simon  onButtonClick={onButtonClick}/>
 
                 {showInput && <Label>Simon says... find out!</Label>}
-                {!showInput && <GoodJob color='#32CC9A'  code='54875'/>}
+                {!showInput && <GoodJob color='#32CC9A'  code='27569'/>}
             </Riddles.LeftSection>
 
             <Riddles.StyledImage src={RiddleTwo_icon} alt='Decorative icon'/>
