@@ -26,7 +26,7 @@ function RiddleOne() {
             <Riddles.LeftSection>
                 <Riddles.Title color='#DF229D'>Kukulkan</Riddles.Title>
 
-                <Riddles.Subtitle>Solve the Mores code</Riddles.Subtitle>
+                <Riddles.Subtitle>Solve the Morse code</Riddles.Subtitle>
 
                 <MoresCodeImg src={RiddleOneMores_icon} alt="Mores code" />
 
