@@ -8,10 +8,10 @@ export const Label = styled.label`
 `
 
 export const Code = styled.label`
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 900;
     line-height: 56px;
     color: #32CC9A;
 
-    padding-left: 10px;
+    padding-left: 15px;
 `;

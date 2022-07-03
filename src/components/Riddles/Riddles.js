@@ -1,19 +1,30 @@
-import React from 'react';
-import { Carousel } from 'react-bootstrap';
-import RiddleUpper_icon from '../../assets/images/RiddleUpper_icon.svg';
-import RiddleLower_icon from '../../assets/images/RiddleLower_icon.svg';
+import React from "react";
+import { Carousel } from "react-bootstrap";
+import RiddleUpper_icon from "../../assets/images/RiddleUpper_icon.svg";
+import RiddleLower_icon from "../../assets/images/RiddleLower_icon.svg";
 // import step2 from './../assets/images/step2.png';
 // import step3 from './../assets/images/step3.png';
 // import step1 from './../assets/images/step1.png';
-import { Container, LeftSection, LowerImage, Main, StyledImage, Subtitle, Title, UpperImage } from './Riddles.style';
-import RiddleOne from './RiddleOne/RiddleOne';
+import {
+  Container,
+  LeftSection,
+  LowerImage,
+  Main,
+  StyledImage,
+  Subtitle,
+  Title,
+  UpperImage,
+} from "./Riddles.style";
+import RiddleOne from "./RiddleOne/RiddleOne";
+import RiddleThree from "./RiddleThree/RiddleThree";
 
 const Riddles = () => {
   return (
     <Main>
-                  <UpperImage src={RiddleUpper_icon} alt='Icon'/>
-            <LowerImage src={RiddleLower_icon} alt='Icon'/>
-      <RiddleOne />
+      <UpperImage src={RiddleUpper_icon} alt="Icon" />
+      <LowerImage src={RiddleLower_icon} alt="Icon" />
+      {/* <RiddleOne /> */}
+      <RiddleThree />
     </Main>
     // <Carousel>
     //   <Carousel.Item>
@@ -50,8 +61,8 @@ const Riddles = () => {
     //     </Carousel.Caption>
     //   </Carousel.Item>
     // </Carousel>
-  )
-}
+  );
+};
 
 Riddles.Container = Container;
 Riddles.StyledImage = StyledImage;

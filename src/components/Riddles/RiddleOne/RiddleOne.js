@@ -1,9 +1,9 @@
 import React from 'react';
-import { Container, LeftSection, StyledImage, Title, Subtitle, MoresCodeImg } from './RiddleOne.style';
+import { MoresCodeImg } from './RiddleOne.style';
 import RiddleOne_icon from '../../../assets/images/RiddleOne_icon.svg';
 
 import RiddleOneMores_icon from '../../../assets/images/RiddleOneMores_icon.svg';
-import Question from './Question/Question';
+import Question from '../Question/Question';
 import GoodJob from '../GoodJob/GoodJob';
 import Riddles from '../Riddles';
 
@@ -17,7 +17,7 @@ function RiddleOne() {
 
                 <MoresCodeImg src={RiddleOneMores_icon} alt="Mores code" />
 
-                {false && <Question />}
+                {false && <Question inputLength={8}/>}
                 {true && <GoodJob color='#DF229D' code='8940393'/>}
             </Riddles.LeftSection>
 

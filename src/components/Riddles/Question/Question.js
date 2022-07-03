@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
 import { Button, Container, Input, InputContainer, Label } from './Question.style';
 
-function Question() {
+function Question({inputLength}) {
     const inputsRef = useRef(
-        Array.from(Array(8), () => [])
+        Array.from(Array(inputLength), () => [])
       );
 
       function moveFocus(index) {
