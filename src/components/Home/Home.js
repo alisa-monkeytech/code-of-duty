@@ -1,22 +1,46 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import HomeBackground_icon from "../../assets/images/HomeBackground_icon.svg";
 import HomeTitle from "../../assets/images/HomeTitle_icon.svg";
 import { Button, Content, Main, Paragraph, StyledImage } from "./Home.style";
 
+
+const useAudio = url => {
+  const [audio] = useState(new Audio(url));
+  const [playing, setPlaying] = useState(true);
+
+  const toggle = () => setPlaying(!playing);
+
+  useEffect(() => {
+      playing ? audio.play() : audio.pause();
+    },
+    [playing]
+  );
+
+  useEffect(() => {
+    audio.addEventListener('ended', () => setPlaying(false));
+    return () => {
+      audio.removeEventListener('ended', () => setPlaying(false));
+    };
+  }, []);
+
+  return [playing, toggle];
+};
+
 function Home() {
   const navigate = useNavigate();
+  const [playing, toggle] = useAudio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3');
 
   const onClickHandler = () => {
     navigate('/before-you-start');
   }
+  
   return (
     <Main>
       <StyledImage src={HomeBackground_icon} alt="Decorative img" />
 
       <Content>
         <img src={HomeTitle} alt="Our Story" />
-
         <Paragraph>
           2000 years since the last sunrise, a symbol of hope resurfaces in the
           vast wastelands of Earth.
