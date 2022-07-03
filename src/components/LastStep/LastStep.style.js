@@ -8,3 +8,8 @@ export const Main = styled.main`
 
     height: 100vh;
 `
+export const DotsContainer = styled.div`
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+`;

@@ -1,12 +1,14 @@
 import React from 'react';
-import { Main } from './LastStep.style';
+import { DotsContainer, Main } from './LastStep.style';
 
 
-function LastStep() {
+function LastStep({dots}) {
 
     return ( 
         <Main>
-
+            <DotsContainer>
+            {dots}
+            </DotsContainer>
         </Main>
      );
 }
