@@ -9,11 +9,12 @@ export const StyledImage = styled.img`
 `;
 
 export const Content = styled.section`
-    padding: 121px 150px 30px;
+    padding: 20px 150px 50px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 30px;
 `;
 
 export const Paragraph = styled.p`
@@ -23,7 +24,6 @@ export const Paragraph = styled.p`
     line-height: 56px;
     text-align: center;
 
-    margin-bottom: 72px;
     cursor: default;
 `;
 
@@ -31,9 +31,9 @@ export const Button = styled.button`
     border: none;
     border-radius: 30px;
 
-    width: 260px;
-    height: 56px;
+    padding: 5px 33px 10px;
     background-color: #32CC9A;
+    margin-top: 30px;
 
     color: #2A2E0A;
     font-weight: 900;

@@ -1,29 +1,43 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import HomeBackground_icon from "../../assets/images/HomeBackground_icon.svg";
 import HomeTitle from "../../assets/images/HomeTitle_icon.svg";
 import { Button, Content, Main, Paragraph, StyledImage } from "./Home.style";
 
 function Home() {
+  const navigate = useNavigate();
+
+  const onClickHandler = () => {
+    navigate('/before-you-start');
+  }
   return (
     <Main>
       <StyledImage src={HomeBackground_icon} alt="Decorative img" />
 
       <Content>
-        <img src={HomeTitle} alt="Our Story"/>
+        <img src={HomeTitle} alt="Our Story" />
 
         <Paragraph>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here, content here', making it
-          look like readable English. Many desktop publishing packages and web
-          page editors now use Lorem Ipsum as their default model text, and a
-          search for 'lorem ipsum' will uncover many web sites still in their
-          infancy. Various versions have evolved over the years, sometimes by
-          accident, sometimes on purpose (injected humour and the like).
+          2000 years since the last sunrise, a symbol of hope resurfaces in the
+          vast wastelands of Earth.
         </Paragraph>
 
-        <Button>Start here</Button>
+        <Paragraph>
+          Arun Owondo is a scavenger, though not by choice and not for long. A
+          band of reclusive Hillfolk have imprisoned him for wearing their
+          prized possession: a pair of gloves that can wield cosmic dark energy.
+        </Paragraph>
+
+        <Paragraph>
+          If Arun is innocent, they’ll need his help. The Hillfolk must embark
+          on finding a lost companion and overthrowing the self-proclaimed God
+          who destroyed the world, leaving it shrouded, frozen in a timeless
+          time.
+        </Paragraph>
+
+        <Paragraph>But whilst their bodies begin one journey...</Paragraph>
+
+        <Button onClick={onClickHandler}>Start your journey</Button>
       </Content>
     </Main>
   );
