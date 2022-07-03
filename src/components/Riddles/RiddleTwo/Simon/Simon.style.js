@@ -1,0 +1,32 @@
+import styled from "styled-components";
+
+export const Container = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    
+    width: 258px;
+    height: 258px;
+    margin-top: 60px;
+    margin-left: 60px;
+    
+    transform: rotate(45deg);
+`;
+
+export const BlueButtons = styled.button`
+    border: none;
+    border-radius: 20px;
+    background-color: #1E979680;
+
+    width: 118px;
+    height: 118px;
+`;
+
+export const Button = styled.button`
+    border: none;
+    border-radius: 20px;
+
+    background-color: ${({background}) => background};
+    width: 38px;
+    height: 38px;
+`;

@@ -17,6 +17,7 @@ import {
 } from "./Riddles.style";
 import RiddleOne from "./RiddleOne/RiddleOne";
 import RiddleThree from "./RiddleThree/RiddleThree";
+import RiddleTwo from "./RiddleTwo/RiddleTwo";
 
 const Riddles = () => {
   return (
@@ -24,7 +25,8 @@ const Riddles = () => {
       <UpperImage src={RiddleUpper_icon} alt="Icon" />
       <LowerImage src={RiddleLower_icon} alt="Icon" />
       {/* <RiddleOne /> */}
-      <RiddleThree />
+      <RiddleTwo />
+      {/* <RiddleThree /> */}
     </Main>
     // <Carousel>
     //   <Carousel.Item>
