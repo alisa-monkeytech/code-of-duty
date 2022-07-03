@@ -7,7 +7,7 @@ import GoodJob from '../GoodJob/GoodJob';
 
 const hiddenSolution = 'URUDLLUDRL';
 
-function RiddleTwo() {
+function RiddleTwo({dots}) {
     const [showInput, setShowInput] = useState(true);
     const [currentSolution, setCurrentSolution] = useState('');
     const [buttonsCombination, setButtonsCombination] = useState('');
@@ -39,6 +39,7 @@ function RiddleTwo() {
     }
 
     return ( 
+        <Riddles.Wrapper background='#011F20'>
         <Riddles.Container background='#011F20'>
             <Riddles.LeftSection>
                 <Riddles.Title color='#FEA614'>Ek Chuaj</Riddles.Title>
@@ -52,6 +53,9 @@ function RiddleTwo() {
             <Riddles.StyledImage src={RiddleTwo_icon} alt='Decorative icon'/>
 
         </Riddles.Container>
+
+        {dots}
+        </Riddles.Wrapper>
      );
 }
 

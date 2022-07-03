@@ -8,7 +8,7 @@ import { PuzzleImg } from './RiddleThree.style';
 
 const hiddenSolution = 'banana';
 
-function RiddleThree() {
+function RiddleThree({dots}) {
     const [showInput, setShowInput] = useState(true);
     const [currentSolution, setCurrentSolution] = useState('');
 
@@ -19,6 +19,7 @@ function RiddleThree() {
     }, [currentSolution]);
 
     return ( 
+        <Riddles.Wrapper background='#160D0B'>
         <Riddles.Container background='#160D0B'>
             <Riddles.LeftSection>
                 <Riddles.Title color='#EC2001'>Kinich Ahau</Riddles.Title>
@@ -34,6 +35,8 @@ function RiddleThree() {
             <Riddles.StyledImage src={RiddleThree_icon} alt="Decorative icon"/>
 
         </Riddles.Container>
+        {dots}
+        </Riddles.Wrapper>
      );
 }
 

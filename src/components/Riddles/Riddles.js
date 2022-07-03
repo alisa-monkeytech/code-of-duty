@@ -1,10 +1,6 @@
-import React from "react";
-import { Carousel } from "react-bootstrap";
+import React, { useState } from "react";
 import RiddleUpper_icon from "../../assets/images/RiddleUpper_icon.svg";
 import RiddleLower_icon from "../../assets/images/RiddleLower_icon.svg";
-// import step2 from './../assets/images/step2.png';
-// import step3 from './../assets/images/step3.png';
-// import step1 from './../assets/images/step1.png';
 import {
   Container,
   LeftSection,
@@ -14,57 +10,30 @@ import {
   Subtitle,
   Title,
   UpperImage,
+  Wrapper,
 } from "./Riddles.style";
 import RiddleOne from "./RiddleOne/RiddleOne";
 import RiddleThree from "./RiddleThree/RiddleThree";
 import RiddleTwo from "./RiddleTwo/RiddleTwo";
 import RiddleFour from "./RiddleFour/RiddleFour";
+import Dots from "./Dots/Dots";
 
 const Riddles = () => {
+  const [currentRiddle, setCurrentRiddle] = useState(0);
+  const riddles = [<RiddleOne />, <RiddleTwo />, <RiddleThree />, <RiddleFour />];
+  const dots =  <Dots currentRiddle={currentRiddle} setCurrentRiddle={setCurrentRiddle} riddles={riddles}/>;
+
   return (
     <Main>
       <UpperImage src={RiddleUpper_icon} alt="Icon" />
       <LowerImage src={RiddleLower_icon} alt="Icon" />
-      {/* <RiddleOne /> */}
-      {/* <RiddleTwo /> */}
-      {/* <RiddleThree /> */}
-      <RiddleFour />
+
+      {currentRiddle === 0 && <RiddleOne dots={dots} />}
+      {currentRiddle === 1 && <RiddleTwo dots={dots}/>}
+     {currentRiddle === 2 && <RiddleThree dots={dots}/>}
+      {currentRiddle === 3 && <RiddleFour dots={dots}/>}
+
     </Main>
-    // <Carousel>
-    //   <Carousel.Item>
-    //     <img
-    //       className="d-block w-100"
-    //       src={step1}
-    //       alt="First step"
-    //     />
-    //     <Carousel.Caption>
-    //       <h3>First slide label</h3>
-    //       <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-    //     </Carousel.Caption>
-    //   </Carousel.Item>
-    //   <Carousel.Item>
-    //     <img
-    //       className="d-block w-100"
-    //       src={step2}
-    //       alt="Second step"
-    //     />
-    //     <Carousel.Caption>
-    //       <h3>Second slide label</h3>
-    //       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    //     </Carousel.Caption>
-    //   </Carousel.Item>
-    //   <Carousel.Item>
-    //     <img
-    //       className="d-block w-100"
-    //       src={step3}
-    //       alt="Third step"
-    //     />
-    //     <Carousel.Caption>
-    //       <h3>Third slide label</h3>
-    //       <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    //     </Carousel.Caption>
-    //   </Carousel.Item>
-    // </Carousel>
   );
 };
 
@@ -73,5 +42,6 @@ Riddles.StyledImage = StyledImage;
 Riddles.LeftSection = LeftSection;
 Riddles.Title = Title;
 Riddles.Subtitle = Subtitle;
+Riddles.Wrapper = Wrapper;
 
 export default Riddles;

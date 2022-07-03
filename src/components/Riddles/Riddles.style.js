@@ -19,11 +19,16 @@ export const LowerImage = styled.img`
   opacity: 0.1;
 `;
 
+export const Wrapper = styled.div`
+  background-color: ${({ background }) => background};
+height: 100%;
+`;
+
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
 
-  height: 100%;
+  height: calc(100% - 36px);
   padding: 60px 124px 0 70px;
   background-color: ${({ background }) => background};
 `;
@@ -53,3 +58,4 @@ export const Subtitle = styled.h2`
   line-height: 36px;
   color: #ffffff;
 `;
+
