@@ -42,24 +42,19 @@ function Home() {
       <Content>
         <img src={HomeTitle} alt="Our Story" />
         <Paragraph>
-          2000 years since the last sunrise, a symbol of hope resurfaces in the
-          vast wastelands of Earth.
+        You were on a search in the Amazon jungle
+        After a week you have finally found the lost pyramid of the Mayans
+        As soon as you entered, the doors locked behind you
+        And you heard a terrible voice:
+        "Humans! We are the Maya gods, if you want to get out of here you must pass our tests, you have an hour or you will be buried here with us forever"
+        7 gods & 7 puzzles
         </Paragraph>
 
         <Paragraph>
-          Arun Owondo is a scavenger, though not by choice and not for long. A
-          band of reclusive Hillfolk have imprisoned him for wearing their
-          prized possession: a pair of gloves that can wield cosmic dark energy.
+        Will we be able to solve them and escape?
+
         </Paragraph>
 
-        <Paragraph>
-          If Arun is innocent, they’ll need his help. The Hillfolk must embark
-          on finding a lost companion and overthrowing the self-proclaimed God
-          who destroyed the world, leaving it shrouded, frozen in a timeless
-          time.
-        </Paragraph>
-
-        <Paragraph>But whilst their bodies begin one journey...</Paragraph>
 
         <Button onClick={onClickHandler}>Start your journey</Button>
       </Content>

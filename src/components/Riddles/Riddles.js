@@ -17,10 +17,11 @@ import RiddleThree from "./RiddleThree/RiddleThree";
 import RiddleTwo from "./RiddleTwo/RiddleTwo";
 import RiddleFour from "./RiddleFour/RiddleFour";
 import Dots from "./Dots/Dots";
+import LastStep from "../LastStep/LastStep";
 
 const Riddles = () => {
   const [currentRiddle, setCurrentRiddle] = useState(0);
-  const riddles = [<RiddleOne />, <RiddleTwo />, <RiddleThree />, <RiddleFour />];
+  const riddles = [<RiddleOne />, <RiddleTwo />, <RiddleThree />, <RiddleFour />, <LastStep />];
   const dots =  <Dots currentRiddle={currentRiddle} setCurrentRiddle={setCurrentRiddle} riddles={riddles}/>;
 
   return (
@@ -32,7 +33,7 @@ const Riddles = () => {
       {currentRiddle === 1 && <RiddleTwo dots={dots}/>}
      {currentRiddle === 2 && <RiddleThree dots={dots}/>}
       {currentRiddle === 3 && <RiddleFour dots={dots}/>}
-
+      {currentRiddle === 4 && <LastStep dots={dots} />}
     </Main>
   );
 };
