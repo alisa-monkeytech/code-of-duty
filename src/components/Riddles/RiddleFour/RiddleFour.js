@@ -3,6 +3,7 @@ import Riddles from '../Riddles';
 import Puzzle from './Puzzle/Puzzle';
 import { Label } from './RiddleFour.style';
 import RiddleFour_icon from '../../../assets/images/RiddleFour_icon.svg';
+import GoodJob from '../GoodJob/GoodJob';
 
 const hiddenSolution = "3258346";
 
@@ -12,7 +13,6 @@ function RiddleFour({dots}) {
     useEffect(() => {
         if(!hiddenSolution.startsWith(hiddenSolution)) {
             alert('wrong!');
-            setCurrentSolution('');
         }
     }, [currentSolution]);
 
@@ -29,6 +29,7 @@ function RiddleFour({dots}) {
                     <Puzzle setIndexx={handleSetIndexes}/>
 
                     <Label>Mysterious symbols... find out!</Label>
+                    <GoodJob color="#DF229D" code="32441" />
                 </Riddles.LeftSection>
 
                 <Riddles.StyledImage src={RiddleFour_icon} alt="Decorative icon" />
