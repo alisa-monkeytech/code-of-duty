@@ -6,7 +6,6 @@ import Riddles from './components/Riddles/Riddles';
 import Home from './components/Home/Home';
 import MathRiddle from './components/MathRiddle/MathRiddle';
 import SuccessScreen from './components/SuccessScreen/SuccessScreen';
-import LastStep from './components/LastStep/LastStep';
 
 const App = () => {
   return (
@@ -21,7 +20,6 @@ const App = () => {
           <Route index element={<Riddles />} />
         </Route>
         <Route path="success" element={<SuccessScreen/>}/>
-        <Route path="last_step" element={<LastStep/>}/>
       </Routes>
     </BrowserRouter>
   )
