@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import BeforeYouStart from './components/BeforeYouStart/BeforeYouStart';
-import CarouselContainer from './components/CarouselContainer';
+import Riddles from './components/Riddles/Riddles';
 import Home from './components/Home/Home';
 import MathRiddle from './components/MathRiddle/MathRiddle';
 
@@ -16,7 +16,7 @@ const App = () => {
 
         <Route path='riddles' >
           <Route path="math" element={<MathRiddle />}/>
-          <Route index element={<CarouselContainer />} />
+          <Route index element={<Riddles />} />
         </Route>
       </Routes>
     </BrowserRouter>
