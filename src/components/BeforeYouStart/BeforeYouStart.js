@@ -17,7 +17,7 @@ function BeforeYouStart() {
                 <Title>BEFORE YOU START</Title>
                 <Subtitle>{subtitleText}</Subtitle>
                 <Paragraph>
-                Arun Owondo is a scavenger, though not by choice and not for long. A band of reclusive Hillfolk have imprisoned him for wearing their prized possession: a pair of gloves that can wield cosmic dark energy.
+                You can move between different stages and must think outside of the box ;)
                 </Paragraph>
 
                 <Button onClick={onClickHandler}>
