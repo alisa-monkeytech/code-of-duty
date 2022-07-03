@@ -6,7 +6,7 @@ function GoodJob({color, code}) {
        <div>
         <Label color={color}>Good job! 😜</Label>
         {code && <Code>Your number is {code}</Code>}
-        <Label color={color}>This stage is completed</Label>
+        <Label color={color}>The God is smiling upon you!</Label>
        </div> 
      );
 }
