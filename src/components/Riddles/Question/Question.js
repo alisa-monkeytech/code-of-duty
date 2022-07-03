@@ -7,13 +7,13 @@ function Question({ setCurrentSolution, inputLength }) {
       );
 
       function moveFocus(index) {
-        inputsRef.current[index].focus();
+        inputsRef.current[index]?.focus();
       }
 
 
        function handleChange(event, index) {
         if (index < 7 && event.target.value !== "") moveFocus(index + 1);
-        blaBla();
+        handleSolution();
       }
 
       function moveFocusBackwards(event, index) {
@@ -25,7 +25,7 @@ function Question({ setCurrentSolution, inputLength }) {
           moveFocus(index - 1);
       }
 
-      function blaBla() {
+      function handleSolution() {
         const value = inputsRef.current.map((input) => {
           return input.value;
         }).join('');

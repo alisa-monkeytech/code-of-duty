@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Riddles from '../Riddles';
 import RiddleThreePuzzle_icon from '../../../assets/images/RiddleThreePuzzle_icon.svg';
 import Question from '../Question/Question';
@@ -6,7 +6,18 @@ import GoodJob from '../GoodJob/GoodJob';
 import RiddleThree_icon from '../../../assets/images/RiddleThree_icon.svg';
 import { PuzzleImg } from './RiddleThree.style';
 
+const hiddenSolution = 'banana';
+
 function RiddleThree() {
+    const [showInput, setShowInput] = useState(true);
+    const [currentSolution, setCurrentSolution] = useState('');
+
+    useEffect(() => {
+        if (currentSolution.toLowerCase() === hiddenSolution) {
+            setShowInput(false);
+        }
+    }, [currentSolution]);
+
     return ( 
         <Riddles.Container background='#160D0B'>
             <Riddles.LeftSection>
@@ -16,8 +27,8 @@ function RiddleThree() {
 
                 <PuzzleImg src={RiddleThreePuzzle_icon} alt='Puzzle' />
 
-                {true && <Question inputLength={6}/>}
-                {false && <GoodJob color='#FED707' code='54875'/>}
+                {showInput && <Question inputLength={6} setCurrentSolution={setCurrentSolution}/>}
+                {!showInput && <GoodJob color='#FED707' code='54875'/>}
             </Riddles.LeftSection>
 
             <Riddles.StyledImage src={RiddleThree_icon} alt="Decorative icon"/>
