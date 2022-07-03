@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Mama Kilo Decorated';
+  src: url('./assets/fonts/MamakiloDecorative-nRXA1.ttf');
+}
+
+@font-face {
+  font-family: 'Mama Kilo';
+  src: url('./assets/fonts/MamakiloBlack-lgLx5.ttf');
+}
+
+* {
+  font-family: 'Mama Kilo';
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
